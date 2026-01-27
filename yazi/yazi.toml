@@ -1,0 +1,23 @@
+[manager]
+ratio          = [ 1, 4, 3 ]  # Parent, Current, Preview
+sort_by        = "natural"
+sort_sensitive = false
+sort_reverse   = false
+sort_dir_first = true         # Folder show first 
+show_hidden    = false        # Hidden Files switch with '.'
+linemode       = "size"       # shows Datasize
+show_symlink   = true
+
+# Editor
+[opener]
+edit = [
+    { run = 'hx "$@"', block = true, desc = "Helix", for = "unix" }
+]
+
+[open]
+rules = [
+    { name = "*/", use = "edit" },
+    { mime = "text/*", use = "edit" },
+    { mime = "application/json", use = "edit" },
+]
+

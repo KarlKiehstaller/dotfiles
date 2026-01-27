@@ -1,0 +1,33 @@
+
+export STM32_PRG_PATH=/Applications/STMicroelectronics/STM32Cube/STM32CubeProgrammer/STM32CubeProgrammer.app/Contents/MacOs/bin
+
+export STM32CubeMX_PATH=/Applications/STMicroelectronics/STM32CubeMX.app/Contents/Resources
+
+# ls - eza (farbe für ls)B
+alias ls='eza --icons'
+alias ll='eza --icons -l --group-directories-first'
+alias la='eza --icons -la --group-directories-first'
+
+# Syntaxhighliting
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Autosuggestion
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Starship (Prompt)
+eval "$(starship init zsh)"
+
+# Zoxide (schnelles cd)
+eval "$(zoxide init zsh)"
+alias cd="z"  # Damit 'cd' automatisch zoxide nutzt
+
+# Fish-like Features
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Private Konfiguration (Keys, Tokens) - NICHT im Git
+if [[ -f ~/.zshrc.local ]]; then
+    source ~/.zshrc.local
+fi
+
+

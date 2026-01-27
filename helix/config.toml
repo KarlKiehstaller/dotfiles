@@ -6,6 +6,9 @@ mouse = true
 cursorline = true
 bufferline = "always"
 true-color = true
+scrolloff = 5 
+color-modes = true 
+lsp.display-messages = true
 
 [editor.cursor-shape]
 insert = "bar"
@@ -15,3 +18,12 @@ select = "underline"
 [editor.file-picker]
 hidden = false
 
+[editor.indent-guides]
+render = true
+character = "▏" # Ein schönes, dünnes Zeichen
+skip-levels = 1
+
+[editor.statusline]
+left = ["mode", "spinner", "version-control"]
+center = ["file-name"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-type"]

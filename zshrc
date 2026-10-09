@@ -4,7 +4,7 @@ export STM32_PRG_PATH=/Applications/STMicroelectronics/STM32Cube/STM32CubeProgra
 export STM32CubeMX_PATH=/Applications/STMicroelectronics/STM32CubeMX.app/Contents/Resources
 
 # ls - eza (farbe für ls)B
-alias ls='eza --icons'
+alias ls='eza --icons=auto'
 alias ll='eza --icons -l --group-directories-first'
 alias la='eza --icons -la --group-directories-first'
 
